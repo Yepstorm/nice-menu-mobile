@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:nice_menu_mobile/screens/signup/signup2.dart';
-import '../../utils/const_colors.dart';
+// import '../../utils/const_colors.dart';
 import '../../utils/const_text.dart';
 import '../../widgets/button_widget.dart';
 import '../../widgets/textfield.dart';
@@ -48,7 +48,7 @@ class _SignUpState extends State<SignUp> {
               const Gap(30),
               Column(
                 children: [
-                  FieldText(midText: 'Email'),
+                  const FieldText(midText: 'Email'),
                   const EmailField(),
                   const Gap(15),
                   const PasswordWrite(),
@@ -62,7 +62,7 @@ class _SignUpState extends State<SignUp> {
             context, MaterialPageRoute(builder: (context) => const SignUp2()));
       },
                   ),
-                  ButtonWidget()
+                  const ButtonWidget()
                 ],
               )
             ],

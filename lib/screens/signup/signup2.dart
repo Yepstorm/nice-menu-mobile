@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
-import 'package:nice_menu_mobile/screens/signup/signup.dart';
+// import 'package:nice_menu_mobile/screens/signup/signup.dart';
 import 'package:nice_menu_mobile/screens/signup/otp.dart';
 import 'package:nice_menu_mobile/widgets/button_widget.dart';
 import 'package:nice_menu_mobile/widgets/textfield.dart';
@@ -29,22 +29,24 @@ class _SignUp2State extends State<SignUp2> {
       body: Padding(
         padding: const EdgeInsets.all(15.0),
         child: Container(
+          clipBehavior: Clip.none,
           child: ListView(
             children: [
-              FieldText(midText: 'Name'),
+              const FieldText(midText: 'Name'),
               FieldWidget(hintText: 'Name'),
-              Gap(10),
+              const Gap(10),
               Container(
+                clipBehavior: Clip.none,
                 child: Row(),
               ),
-              FieldText(midText: 'Gender'),
+              const FieldText(midText: 'Gender'),
               FieldWidget(hintText: 'Gender'),
-              Gap(10),
-              FieldText(midText: 'Address'),
+              const Gap(10),
+              const FieldText(midText: 'Address'),
               FieldWidget(hintText: 'Address'),
-              FieldText(midText: 'Phone'),
+              const FieldText(midText: 'Phone'),
               FieldWidget(hintText: 'Phone'),
-              Gap(20),
+              const Gap(20),
               ButtonWidget1(
                 buttonText: 'Sign Up',
                 onTap: () {
@@ -52,7 +54,6 @@ class _SignUp2State extends State<SignUp2> {
                       MaterialPageRoute(builder: (context) => const Otp()));
                 },
               ),
-              ButtonWidget()
             ],
           ),
         ),

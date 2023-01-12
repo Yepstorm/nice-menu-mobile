@@ -63,7 +63,7 @@ class _OnboardingState extends State<Onboarding> {
                           Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => SignIn()));
+                                  builder: (context) => const SignUp()));
                         } else {
                           setState(() {
                             _currentIndex =
@@ -78,7 +78,7 @@ class _OnboardingState extends State<Onboarding> {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => SignIn()));
+                              builder: (context) => const SignUp()));
                     },
                   ),
                 ],

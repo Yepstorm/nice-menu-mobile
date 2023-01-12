@@ -1,62 +1,43 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:nice_menu_mobile/screens/signup/reset/reset_screen.dart';
-import 'package:nice_menu_mobile/utils/const_text.dart';
-import 'package:nice_menu_mobile/widgets/button_widget.dart';
+import 'package:flutter/src/widgets/container.dart';
+import 'package:flutter/src/widgets/framework.dart';
+import 'package:gap/gap.dart';
+import 'package:nice_menu_mobile/screens/reset_password/reset_password.dart';
 
-class Otp extends StatefulWidget {
-  const Otp({super.key});
+import '../../utils/const_text.dart';
+import '../../widgets/button_widget.dart';
+
+class VerifyAccount extends StatefulWidget {
+  const VerifyAccount({super.key});
 
   @override
-  State<Otp> createState() => _OtpState();
+  State<VerifyAccount> createState() => _VerifyAccountState();
 }
 
-class _OtpState extends State<Otp> {
+class _VerifyAccountState extends State<VerifyAccount> {
   @override
   Widget build(BuildContext context) {
-    return Form(
-      child: Scaffold(
-          backgroundColor: Colors.white,
-          appBar: AppBar(
-            backgroundColor: Colors.white,
-            centerTitle: true,
-            elevation: 0,
-            leading: GestureDetector(
-              onTap: () {
-                Navigator.pop(context);
-              },
-              child: const Icon(
-                Icons.arrow_back,
-                color: Colors.black,
-              ),
-            ),
-            title: const Text(
-              "Verify account",
-              style: TextStyle(color: Colors.black),
-            ),
-          ),
-          body: Padding(
-            padding: const EdgeInsets.only(left: 28.0, right: 28.0),
-            child:
-                Column(mainAxisAlignment: MainAxisAlignment.center, children: [
-              // Container(
-              //   alignment: Alignment.topLeft,
-              //   child: const Text(
-              //     "OTP",
-              //     style: TextStyle(
-              //       fontSize: 18,
-              //       fontWeight: FontWeight.w500,
-              //       color: Color(0xffCE1567),
-              //     ),
-              //     textAlign: TextAlign.left,
-              //   ),
-              // ),
-              const SmallText(
-                  smallText:
-                      'Please enter the verification code sent to\n ****xample@email.com to verify account'),
-              const SizedBox(
-                height: 30,
-              ),
+    return Scaffold(
+      appBar: AppBar(
+        centerTitle: true,
+        leading: IconButton(
+          onPressed: () {},
+          icon: const Icon(Icons.arrow_back_ios_new_rounded),
+        ),
+      ),
+      body: Padding(
+          padding: const EdgeInsets.all(15.0),
+          child: Container(
+            clipBehavior: Clip.none,
+            child: ListView(children: [
+              const Gap(50),
+              const BigText(bigText: 'Verify account'),
+              const Gap(15),
+              const MidText2(
+                  midText2:
+                      'Enter the OTP sent ***ndoe@example.com\n to verify account'),
+              const Gap(30),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
@@ -184,7 +165,6 @@ class _OtpState extends State<Otp> {
               const SizedBox(
                 height: 20,
               ),
-
               const SizedBox(
                 height: 20,
               ),
@@ -192,8 +172,16 @@ class _OtpState extends State<Otp> {
                  Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => const ResetScreen()));
-              })
+                              builder: (context) => const ResetPassword()));
+              }),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  const SmallText(smallText: 'Didnt get the code?'),
+                  TextButton(
+                      onPressed: () {}, child: const Text("Resend code")),
+                ],
+              )
             ]),
           )),
     );
