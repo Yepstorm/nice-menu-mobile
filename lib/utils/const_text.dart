@@ -38,7 +38,9 @@ class MidText extends StatelessWidget {
     return Text(
       midText,
       style: TextStyle(
-          fontSize: 15, fontWeight: FontWeight.w400, color: color?? Colors.black),
+          fontSize: 15,
+          fontWeight: FontWeight.w400,
+          color: color ?? Colors.black),
     );
   }
 }
@@ -140,6 +142,22 @@ class ButtonText2 extends StatelessWidget {
       buttonText2,
       style: const TextStyle(
           fontSize: 19, fontWeight: FontWeight.w300, color: colOrange1),
+    );
+  }
+}
+
+class TinyText extends StatelessWidget {
+  const TinyText({super.key, required this.tinyText, this.color});
+  final String tinyText;
+  final Color? color;
+  @override
+  Widget build(BuildContext context) {
+    return Text(
+      tinyText,
+      style: TextStyle(
+          fontSize: 10,
+          fontWeight: FontWeight.w400,
+          color: color ?? Colors.black),
     );
   }
 }

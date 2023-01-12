@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 
-
 import '../../utils/const_text.dart';
 import '../../widgets/button_widget.dart';
 import '../../widgets/textfield.dart';
@@ -32,19 +31,23 @@ class _SignUp2State extends State<SignUp2> {
           child: ListView(
             children: [
               const FieldText(midText: 'Name'),
-              FieldWidget(hintText: 'Name'),
+              const FieldWidget(hintText: 'Name'),
               const Gap(10),
               Container(
                 child: Row(),
               ),
-              FieldText(midText: 'Gender'),
-              FieldWidget(hintText: 'Gender'),
-              Gap(10),
-              FieldText(midText: 'Address'),
-              FieldWidget(hintText: 'Address'),
-              FieldText(midText: 'Phone'),
-              FieldWidget(hintText: 'Phone'),
-              Gap(20),
+              const FieldText(midText: 'Gender'),
+              const FieldWidget2(hintText: 'Gender'),
+              const Gap(10),
+              const SizedBox(
+                height: 20,
+                // child: MyDropdownWidget(),
+              ),
+              const FieldText(midText: 'Address'),
+              const FieldWidget(hintText: 'Address'),
+              const FieldText(midText: 'Phone'),
+              const FieldWidget(hintText: 'Phone'),
+              const Gap(20),
               ButtonWidget1(
                 buttonText: 'Sign Up',
                 onTap: () {
@@ -52,7 +55,6 @@ class _SignUp2State extends State<SignUp2> {
                       MaterialPageRoute(builder: (context) => const Otp()));
                 },
               ),
-            
             ],
           ),
         ),

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:nicemenu/theme/theme_constants.dart';
 
 import 'screens/splash_screen/splash_screen.dart';
-
 
 void main() {
   runApp(const MyApp());
@@ -15,10 +15,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
         debugShowCheckedModeBanner: false,
         title: '',
-        theme: ThemeData(
-          // elevatedButtonTheme: ElevatedButtonThemeData(style: ButtonStyle(backgroundColor: Colors.white)),
-          useMaterial3: true,
-        ),
+        theme: lightTheme,
         home: SplashScreen());
   }
 }
